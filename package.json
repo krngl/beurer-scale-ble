@@ -1,6 +1,6 @@
 {
   "name": "@krngl/beurer-scale-ble",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Read weight and body composition from a Beurer BF500 scale over Bluetooth LE (Linux / BlueZ)",
   "main": "./build/src",
   "types": "./build/src/index.d.ts",
