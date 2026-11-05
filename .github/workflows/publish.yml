@@ -1,0 +1,27 @@
+name: Publish package
+on:
+  push:
+    tags:
+      - '*'
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '26.x'
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@krngl'
+
+      - run: npm install -g corepack
+      - run: corepack enable
+      - run: yarn install --immutable
+      - run: yarn test
+      - run: yarn build
+      - run: yarn npm publish --access public

@@ -1,0 +1,49 @@
+{
+  "name": "@krngl/beurer-scale-ble",
+  "version": "0.0.1",
+  "description": "Read weight and body composition from a Beurer BF500 scale over Bluetooth LE (Linux / BlueZ)",
+  "main": "./build/src",
+  "types": "./build/src/index.d.ts",
+  "bin": {
+    "bf500": "./build/src/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krngl/beurer-scale-ble.git"
+  },
+  "author": "Jakob Goerke <mail@krngl.dev>",
+  "license": "AGPL-3.0-or-later",
+  "files": [
+    "package.json",
+    "build/src/**"
+  ],
+  "engines": {
+    "node": ">=26"
+  },
+  "scripts": {
+    "build": "rimraf build && tsc -p .",
+    "watch": "tsc -p . --watch",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "lint": "biome check"
+  },
+  "packageManager": "yarn@4.12.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.6.5",
+    "@jest/globals": "30.5.2",
+    "@tsconfig/node26": "26.0.1",
+    "@types/jest": "30.0.0",
+    "@types/node": "26.6.6",
+    "jest": "30.5.2",
+    "rimraf": "6.1.4",
+    "ts-jest": "29.4.15",
+    "ts-node": "10.9.2",
+    "typescript": "6.0.3"
+  },
+  "dependencies": {
+    "dbus-native": "0.16.3"
+  }
+}
