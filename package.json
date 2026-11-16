@@ -33,9 +33,9 @@
     "provenance": true
   },
   "devDependencies": {
-    "@biomejs/biome": "2.6.6",
+    "@biomejs/biome": "2.6.7",
     "@jest/globals": "30.5.2",
-    "@tsconfig/node26": "26.0.1",
+    "@tsconfig/node26": "26.0.2",
     "@types/jest": "30.0.0",
     "@types/node": "26.6.6",
     "jest": "30.5.2",
